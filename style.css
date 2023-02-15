@@ -1,0 +1,191 @@
+.parentcontainer {
+  display: flex;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 80px 10% 50px;
+  }
+  
+  .image {
+    width: 320px;
+    height: 320px;
+    box-shadow: 0 0 10px yellow;
+  }
+  
+  .text {
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+  @media (max-width: 600px) { /* Changes the direction of the flexbox when screensize are smaller than 600px */
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .image {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .ticket-button {
+    background-color: #cc35e4; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Specify font size */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    transition: transform 0.2s; /* Add transition effect when transforming the button */
+    transition: background-color 0.5s ease;
+    margin-top: 20px;
+  }
+  
+/* Change button size when hovering over it */
+.ticket-button:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}
+
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #222;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 30px 0 30px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-link:hover {
+  color: lightgray;
+}
+
+/* adjust the font-size and margin of the elements when the screen size is less than 768px:*/
+
+@media (max-width: 768px) {
+  .navbar-link {
+  font-size: 16px;
+  }
+  
+  .navbar-item {
+  margin: 0 30px 0 30px;
+  }
+  }
+
+@media (min-width: 880px) {
+  .navbar-link {
+    font-size: 20px;
+    }
+    
+  .navbar-item {
+    margin: 0 70px 0 70px;
+    }
+    }
+
+
+
+/*Timer*/
+#timer {
+  font-size: x-large;
+  margin: 5% 5% 0% 5%;
+  border: 3px solid #cc35e4;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#timer:hover {
+  background-color: #cc35e4;
+  box-shadow: 0px 0px 10px yellow;
+  cursor: pointer;
+}
+
+/*Newletter form subscription*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 30px 0;
+}
+
+input[type="email"] {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/*Social Media*/
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px 0 10px;
+  border-radius: 25px;
+  background-color: #1d60e5;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.share-button img {
+  font-size: 28px;
+}
+
+.share-button:hover {
+  transform: scale(1.05);
+}

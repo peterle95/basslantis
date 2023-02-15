@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<link rel="stylesheet" href="style_header.css"/>
+<link rel="stylesheet" href="style.css"/>
+
+<head>
+ <title>Basslantis</title>
+ <link href="icon" href="LOGO BASSLANTIS ICON.jpg" type="image/icon type"> <!--This adds the icon
+    on the title of the webpage-->
+
+ <!-- Add the header with the logo in the center -->
+<a href="https://www.instagram.com/basslantis" class="instagram-link enlarge">
+  <span class="company-logo-link" 
+  style="background-image: url('./LOGO BASSLANTIS.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  display: inline-block; 
+  width: 300px; 
+  height: 300px;
+  margin-bottom: 50px;"
+  ></span>
+
+
+  
+</a>
+
+<header>
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item">
+        <a href="#about" class="navbar-link">About</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#events" class="navbar-link">Events</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#contact" class="navbar-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+</head>
+
+<body>
+
+  <div id="timer"></div>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jul 7, 2023 12:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+      
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Display the result in the element with id="timer"
+      document.getElementById("timer").innerHTML = "Time left until event: " + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      // If the count down is finished, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    document.getElementById("timer").addEventListener("click", function(){
+  document.querySelector(".ticket-button").scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+
+  document.querySelector(".ticket-button").style.backgroundColor = "yellow";
+
+  setTimeout(function(){
+    document.querySelector(".ticket-button").style.backgroundColor = "";
+  }, 1000);
+});
+  </script>
+  
+
+
+<div class="parentcontainter">
+  <div class="container">
+    <img src="promotion.png" class="image"/>
+        <div class="text">
+          <h1><strong>Welcome to our event!</strong></h1>
+          <br> Our team at Basslantis is proud to present this event! 
+          Bring good vibes, no racism, no sexism, no homophobia will be tollerated</h1>
+          <p>We we are going to organize a boiler-room party on the "Date/Month".</p>
+        </div>
+  </div>
+  <div class="container">
+    <div class="text">
+      <h1><strong>Welcome to our event!</strong></h1> 
+      <br> Our team at Basslantis is proud to present this event! 
+      Bring good vibes, no racism, no sexism, no homophobia will be tollerated</h1>
+      <p>We we are going to organize a boiler-room party on the "Date/Month".</p>
+    </div>
+    <img src="promotion.png" class="image"/>
+  </div>
+</div>
+
+<!--Note: This code is just a basic example, 
+you may need to adjust it based on your website's style and functionality.
+And, you will need to implement server-side code to handle the form submission 
+and send emails to the subscribers.-->
+
+<form action="#" method="post">
+  <label for="email" style="margin-bottom: 10px;">Subscribe to our updates:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email">
+  <input type="submit" value="Subscribe">
+</form>
+
+
+<!--Social Media-->
+<div class="share-buttons">
+  <a href="https://www.instagram.com/share?url=YOUR_EVENT_URL" target="_blank" class="share-button instagram">
+    <img src="instagram-logo.png" alt="Instagram logo" style="width: 30px; height: 30px;">
+  </a>
+  <a href="https://twitter.com/share?url=YOUR_EVENT_URL&text=Check out this event!" target="_blank" class="share-button twitter">
+    <img src="twitter-logo.png" alt="Instagram logo" style="width: 30px; height: 30px;">
+  </a>
+  <a href="https://t.me/share/url?url=YOUR_EVENT_URL&text=Check out this event!" target="_blank" class="share-button telegram">
+    <img src="telegram-logo.png" alt="Instagram logo" style="width: 30px; height: 30px;">
+  </a>
+  <a href="whatsapp://send?text=Check out this event! YOUR_EVENT_URL" target="_blank" class="share-button whatsapp">
+    <img src="whatsapp-logo.png" alt="Instagram logo" style="width: 30px; height: 30px;">
+  </a>
+</div>
+
+<!-- Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <style>
+    #map {
+      width: 50%;
+      height: 500px;
+      float: left;
+    }
+    .event-info {
+      width: 40%;
+      float: right;
+      text-align: center;
+      padding: 20px;
+    }
+    .map-block {
+      margin: 5%;
+    }
+  </style>  
+<h1>Basslantis Event Location</h1>
+<div class="map-block">
+  <div id="map"></div>
+  <div class="event-info">
+    <h2>Event Information</h2>
+    <p>Location: Schillerpromenade 41, 12049 Berlin</p>
+    <p>Date: [Insert Event Date]</p>
+    <p>Time: [Insert Event Time]</p>
+    <p>Admission: [Insert Event Admission Info]</p>
+    <button class="ticket-button">Buy Tickets</button>
+    <br><br>
+    <a href="https://blurryvision.godaddysites.com/">Click here to see the reference</a>
+  </div>
+</div>
+  <script>
+    var map = L.map('map').setView([52.509939, 13.383369], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+      maxZoom: 18
+    }).addTo(map);
+    L.marker([52.509939, 13.383369]).addTo(map)
+      .bindPopup("Schillerpromenade 41, 12049 Berlin")
+      .openPopup();
+  </script>
+
+<!-- End code interactive map -->
+
+
+
+</body>
+
+<script src="js.js"></script>
+
+</html>
